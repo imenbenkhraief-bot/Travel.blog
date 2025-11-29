@@ -1,0 +1,1 @@
+console.log("Travel blog is ready!");
