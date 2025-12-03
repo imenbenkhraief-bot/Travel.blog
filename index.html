@@ -1,26 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Travel Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Blog - Home</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Travel Blog</h1>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">TravelVibes</div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="destinations.html">Destinations</a>
-            <a href="about.html">About</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <h2>Featured Places</h2>
-        <p>Add your 10 places here with images and descriptions.</p>
-    </main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Explore the World Through Inspiring Journeys</h1>
+            <p>Your guide to the most beautiful destinations across the globe.</p>
+            <div class="hero-buttons">
+                <a href="destinations.html" class="btn primary-btn">Explore Destinations</a>
+                <a href="#themes" class="btn secondary-btn">Travel Themes</a>
+            </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h2>Welcome to TravelVibes</h2>
+        <p>
+            From tropical beaches to vibrant cities and breathtaking mountains,
+            discover destinations loved by travelers and filled with unforgettable
+            experiences.
+        </p>
+    </section>
+
+    <!-- Themes Section -->
+    <section id="themes" class="themes">
+        <h2>Explore by Themes</h2>
+        <div class="theme-container">
+            <!-- Beach Theme -->
+            <div class="theme-card">
+                <div class="theme-img beach-img"></div>
+                <h3>Beach Escapes</h3>
+                <p>Tropical sands, turquoise waters, and peaceful island vibes.</p>
+                <a href="destinations.html#beach" class="btn theme-btn">Explore</a>
+            </div>
+
+            <!-- Mountain Theme -->
+            <div class="theme-card">
+                <div class="theme-img mountain-img"></div>
+                <h3>Mountain & Nature</h3>
+                <p>Fresh air, green trails, and breathtaking natural views.</p>
+                <a href="destinations.html#mountain" class="btn theme-btn">Explore</a>
+            </div>
+
+            <!-- Urban Theme -->
+            <div class="theme-card">
+                <div class="theme-img urban-img"></div>
+                <h3>Urban Adventures</h3>
+                <p>Skylines, nightlife, culture, and modern city energy.</p>
+                <a href="destinations.html#urban" class="btn theme-btn">Explore</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Ready for your next adventure?</h2>
+        <a href="destinations.html" class="btn primary-btn">Discover All Destinations</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 TravelVibes. All Rights Reserved.</p>
+    </footer>
+    <a href="destinations.html#beach" class="btn theme-btn">Explore</a>
+    <a href="destinations.html#mountain" class="btn theme-btn">Explore</a>
+    <a href="destinations.html#urban" class="btn theme-btn">Explore</a>
+
 </body>
-</html>
+</html

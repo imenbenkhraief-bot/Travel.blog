@@ -1,8 +1,13 @@
+<<<<<<< Updated upstream
 /* Import Artistic Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&family=Caveat:wght@700&display=swap');
 
 /* ===== GENERAL STYLES ===== */
 * {
+=======
+/*body {
+    font-family: Arial, sans-serif;
+>>>>>>> Stashed changes
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -131,6 +136,7 @@ section::before {
     z-index: 1;
 }
 
+<<<<<<< Updated upstream
 .subheading {
     font-size: 1.6rem;
     font-weight: 300;
@@ -513,4 +519,283 @@ section::before {
     mix-blend-mode: screen;
     z-index: 9999;
     transition: 0.05s linear;
+=======
+main {
+    padding: 20px;
+}*/
+/* =============================
+   GLOBAL STYLES
+============================= *//* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@500;700&family=Poppins:wght@400;500;600&display=swap');
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #F7F9F9;
+    color: #17252A;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p {
+    opacity: 0.9;
+}
+
+.btn {
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.primary-btn {
+    background-color: #3AAFA9;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #2B7A78;
+}
+
+.secondary-btn,
+.theme-btn,
+.filter-btn {
+    border: 2px solid #3AAFA9;
+    color: #3AAFA9;
+}
+
+.secondary-btn:hover,
+.theme-btn:hover,
+.filter-btn:hover {
+    background-color: #3AAFA9;
+    color: white;
+}
+
+/* =============================
+   NAVBAR
+============================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #17252A;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #3AAFA9;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2B7A78;
+}
+
+/* =============================
+   HERO SECTION
+============================= */
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+}
+
+.hero-buttons .btn {
+    margin: 5px;
+}
+
+/* =============================
+   WELCOME
+============================= */
+.welcome,
+.page-header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.welcome p,
+.page-header p {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* =============================
+   THEME CARDS
+============================= */
+.themes {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.theme-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.theme-card {
+    background-color: white;
+    border-radius: 12px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.theme-img {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.beach-img {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+}
+
+.mountain-img {
+    background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+}
+
+.urban-img {
+    background-image: url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b');
+}
+
+/* =============================
+   CTA SECTION
+============================= */
+.cta {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #3AAFA9;
+    color: white;
+}
+
+/* =============================
+   DESTINATION PAGE
+============================= */
+.filters {
+    text-align: center;
+    padding: 20px;
+}
+
+.filter-btn {
+    margin: 5px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.destination-section {
+    padding: 60px 20px;
+}
+
+.destination-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.destination-card {
+    background-color: white;
+    border-radius: 12px;
+    padding-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dest-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* BEACH IMAGES */
+.maldives-img { background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34'); }
+.borabora-img { background-image: url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21'); }
+.seychelles-img { background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da'); }
+
+/* MOUNTAIN / NATURE IMAGES */
+.swissalps-img { background-image: url('https://images.unsplash.com/photo-1500048993959-dc1e71e65f19'); }
+.bali-img { background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); }
+.banff-img { background-image: url('https://images.unsplash.com/photo-1508261303786-0f45ae639b47'); }
+
+/* URBAN IMAGES */
+.tokyo-img { background-image: url('https://images.unsplash.com/photo-1505069442587-67f1df7a4ce3'); }
+.nyc-img { background-image: url('https://images.unsplash.com/photo-1533106418989-88406c7cc8e0'); }
+.paris-img { background-image: url('https://images.unsplash.com/photo-1522098543979-ffc7f79d6e29'); }
+
+/* EXTRA DESTINATION */
+.barcelona-img { background-image: url('https://images.unsplash.com/photo-1511735643442-503bb3bd348a'); }
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    color: #17252A;
+    margin-top: 30px;
+>>>>>>> Stashed changes
 }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Blog - Destinations</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 py-3">
+        <a class="navbar-brand fw-bold text-teal" href="index.html">TravelVibes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="text-center py-5">
+        <h1 class="fw-bold">Discovover your Vibe </h1>
+        <p class="lead">Choose your vibe and explore the best places to visit around the world.</p>
+    </header>
+
+    <!-- Theme Cards -->
+    <section class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card theme-card beach-card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="card-img-top" alt="Beach">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-primary">Beach Escapes</h5>
+                        <p class="card-text">Tropical sands, turquoise waters, and peaceful island vibes.</p>
+                        <button class="btn btn-outline-primary w-100 select-theme" data-theme="beach">Explore Beach</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card theme-card mountain-card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" class="card-img-top" alt="Mountain">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-success">Mountain & Nature</h5>
+                        <p class="card-text">Fresh air, green trails, and breathtaking natural views.</p>
+                        <button class="btn btn-outline-success w-100 select-theme" data-theme="mountain">Explore Mountains</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card theme-card urban-card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b" class="card-img-top" alt="Urban">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-secondary">Urban Adventures</h5>
+                        <p class="card-text">Skylines, nightlife, culture, and modern city energy.</p>
+                        <button class="btn btn-outline-secondary w-100 select-theme" data-theme="urban">Explore Urban</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Container -->
+    <section class="container mb-5" id="destinations-container">
+        <!-- Destination cards will be dynamically injected here by JS -->
+    </section>
+
+    <!-- Destination Modal -->
+    <div class="modal fade" id="destinationModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="destinationModalLabel">Destination Name</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div id="destinationCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+              <div class="carousel-inner" id="carousel-inner">
+                <!-- Carousel images injected by JS -->
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <p id="destination-description"></p>
+            <h6>Recommendations:</h6>
+            <ul id="destination-recommendations"></ul>
+            <h6>Activities:</h6>
+            <ul id="destination-activities"></ul>
+            <h6>Food & Dining:</h6>
+            <ul id="destination-food"></ul>
+            <h6>Accommodation:</h6>
+            <ul id="destination-accommodation"></ul>
+            <h6>Tips & Notes:</h6>
+            <p id="destination-tips"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

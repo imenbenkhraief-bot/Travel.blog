@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Blog - Destinations</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">TravelVibes</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-header">
+        <h1>Discover Destinations by Theme</h1>
+        <p>Choose your vibe and explore the best places to visit around the world.</p>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+        <a href="#beach" class="filter-btn">Beach</a>
+        <a href="#mountain" class="filter-btn">Mountain / Nature</a>
+        <a href="#urban" class="filter-btn">Urban / Cities</a>
+    </section>
+
+    <!-- BEACH THEME -->
+    <section id="beach" class="destination-section">
+        <h2>Beach Destinations</h2>
+        <div class="destination-grid">
+
+            <!-- Maldives -->
+            <div class="destination-card">
+                <div class="dest-img maldives-img"></div>
+                <h3>Maldives</h3>
+                <p>Overwater villas, crystal-clear lagoons, and peaceful island life.</p>
+            </div>
+
+            <!-- Bora Bora -->
+            <div class="destination-card">
+                <div class="dest-img borabora-img"></div>
+                <h3>Bora Bora</h3>
+                <p>Romantic escapes surrounded by turquoise waters and coral reefs.</p>
+            </div>
+
+            <!-- Seychelles -->
+            <div class="destination-card">
+                <div class="dest-img seychelles-img"></div>
+                <h3>Seychelles</h3>
+                <p>White-sand beaches and beautiful granite rock formations.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MOUNTAIN / NATURE THEME -->
+    <section id="mountain" class="destination-section">
+        <h2>Mountain & Nature Destinations</h2>
+        <div class="destination-grid">
+
+            <!-- Swiss Alps -->
+            <div class="destination-card">
+                <div class="dest-img swissalps-img"></div>
+                <h3>Swiss Alps</h3>
+                <p>Snowy peaks, scenic trains, and breathtaking landscapes.</p>
+            </div>
+
+            <!-- Bali -->
+            <div class="destination-card">
+                <div class="dest-img bali-img"></div>
+                <h3>Bali</h3>
+                <p>Green rice terraces, waterfalls, and peaceful nature retreats.</p>
+            </div>
+
+            <!-- Banff National Park -->
+            <div class="destination-card">
+                <div class="dest-img banff-img"></div>
+                <h3>Banff National Park</h3>
+                <p>Emerald lakes, forests, and spectacular Canadian mountains.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- URBAN / CITIES THEME -->
+    <section id="urban" class="destination-section">
+        <h2>Urban & City Destinations</h2>
+        <div class="destination-grid">
+
+            <!-- Tokyo -->
+            <div class="destination-card">
+                <div class="dest-img tokyo-img"></div>
+                <h3>Tokyo</h3>
+                <p>Skyscrapers, neon lights, culture, and futuristic vibes.</p>
+            </div>
+
+            <!-- New York City -->
+            <div class="destination-card">
+                <div class="dest-img nyc-img"></div>
+                <h3>New York City</h3>
+                <p>The city that never sleeps with endless attractions.</p>
+            </div>
+
+            <!-- Paris -->
+            <div class="destination-card">
+                <div class="dest-img paris-img"></div>
+                <h3>Paris</h3>
+                <p>Romantic streets, fashion, food, and timeless landmarks.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXTRA DESTINATION -->
+    <section id="extra" class="destination-section">
+        <h2>Extra Destination</h2>
+        <div class="destination-grid">
+
+            <div class="destination-card">
+                <div class="dest-img barcelona-img"></div>
+                <h3>Barcelona</h3>
+                <p>A colorful blend of art, culture, beaches, and architecture.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 TravelVibes. All Rights Reserved.</p>
+    </footer>
+    
+
+</body>
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1); // remove the '#'
+    const destinationSections = document.querySelectorAll('.destination-section');
+
+    if(hash) {
+        destinationSections.forEach(section => {
+            if(section.id === hash){
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+        const target = document.getElementById(hash);
+        if(target) target.scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+});
+
+</html>
