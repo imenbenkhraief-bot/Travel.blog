@@ -7,13 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation will go here -->
-    
+        <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="OffWeGo Logo" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
     <!-- About Page Header -->
-    <section class="about-header reveal">
+    <header class="page-header reveal">
         <h1>Our Story</h1>
         <p class="subheading">Get inspired, and start your journey!</p>
-    </section>
+    </header>
 
     <!-- Introduction Section -->
     <section class="introduction reveal">
@@ -42,27 +60,59 @@
         <h2>Capturing Our Adventures</h2>
         <div class="photo-grid">
             <div class="photo-item">
-                <img src="https://via.placeholder.com/400x300/4A90E2/ffffff?text=Imen" alt="Imen exploring Tunisia">
-                <p class="photo-caption">Imen</p>
+                <img src="images/imenimg.jpg" alt="" class="lightbox-trigger">
+                <p class="photo-caption">Imen on an adventure</p>
             </div>
             <div class="photo-item">
-                <img src="https://via.placeholder.com/400x300/E24A90/ffffff?text=Line" alt="Line on an adventure">
-                <p class="photo-caption">Line</p>
+                <img src="images/lineimg.jpg" alt="" class="lightbox-trigger">
+                <p class="photo-caption">Line on an adventure</p>
             </div>
             <div class="photo-item">
-                <img src="https://via.placeholder.com/400x300/90E24A/ffffff?text=Together" alt="Imen and Line together">
-                <p class="photo-caption">Partners in Adventure</p>
+                <img src="images/img9.jpg" alt="" class="lightbox-trigger">
+                <p class="photo-caption">WIE ACT Congress</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/img6.jpg" alt="Description of image" class="lightbox-trigger">
+                <p class="photo-caption">Shopping Time!</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/img1.jpg" alt="Description of image" class="lightbox-trigger">
+                <p class="photo-caption">By the Beach</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/DarElKhir.jpg" alt="Description of image" class="lightbox-trigger">
+                <p class="photo-caption">Vintage</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/Medina.jpg" alt="Description of image" class="lightbox-trigger">
+                <p class="photo-caption">Roaming the Medina</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/Orbit.jpg" alt="Description of image" class="lightbox-trigger">
+                <p class="photo-caption">Trying New Things</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/Monastir.jpg" alt="Description of image" class="lightbox-trigger">
+                <p class="photo-caption">Lost in Monastir</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/img7.jpg" alt="Description of image" class="lightbox-trigger">
+                <p class="photo-caption">Kantaoui Port by Night</p>
             </div>
         </div>
     </section>
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" src="" alt="">
+        <div class="lightbox-caption"></div>
+    </div>
 
     <!-- Mission/Goals Section -->
     <section class="mission reveal">
         <h2>Why We Travel & What We Share</h2>
         <p>Our mission is simple: to inspire you to step out of your comfort zone and discover the world around you. Through this blog, we share the best places to visit, from popular attractions to hidden gems that most tourists never find. We'll guide you with honest food recommendations, realistic budgets for each destination, and practical tips that come from real experiences—not just research.</p>
-        
         <p>But more than just travel tips, we want to help you find the courage to try new things. Travel isn't just about visiting places; it's about breaking free from your daily routine, experiencing different cultures, tasting new foods, and making friends from all corners of the world. It's about saying "yes" to adventures that scare you a little and discovering that you're capable of more than you thought.</p>
-        
         <div class="travel-philosophy">
             <h3>Our Travel Philosophy</h3>
             <p><em>"Get lost, find yourself, and make every wrong turn count."</em></p>
@@ -77,7 +127,11 @@
         <a href="contact.html" class="cta-button">Share Your Story</a>
     </section>
 
-    <!-- Footer will go here -->
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 OffWeGo. All rights reserved. | Designed with ❤️ for adventurers</p>
+    </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

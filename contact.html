@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - OffWeGo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="OffWeGo Logo" class="logo-img">
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <header class="contact-header reval">
+        <div class="container">
+            <h1 class="reveal">Get In Touch</h1>
+            <p class="reveal">We'd love to hear from you!</p>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="contact-content reveal">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper reveal">
+                    <h2 class="reveal">Send Us a Message</h2>
+                    <p class="form-subtitle reveal">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form class="contact-form reveal" id="contactForm">
+                        <div class="form-row reveal">
+                            <div class="form-group reveal">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group reveal">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row reveal">
+                            <div class="form-group reveal">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                            </div>
+                            <div class="form-group reveal">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="booking">Booking Question</option>
+                                    <option value="destination">Destination Info</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group reveal">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell us more about your inquiry..."></textarea>
+                        </div>
+
+                        <button type="submit reveal" class="btn btn-primary submit-btn">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info Sidebar -->
+                <div class="contact-info-sidebar reveal">
+                    <div class="info-card reveal">
+                        <h3>Contact Information</h3>
+                        <p>Have a question? Reach out to us through any of these channels.</p>
+                        
+                        <div class="contact-methods reveal">
+                            <div class="contact-method reveal">
+                                <div class="method-icon">📧</div>
+                                <div class="method-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:imen.benkhraief@polytechnicien.tn">imen.benkhraief@polytechnicien.tn</a><br>
+                                    <a href="mailto:line.chouchane@polytechnicien.tn">line.chouchane@polytechnicien.tn</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method reveal">
+                                <div class="method-icon">📍</div>
+                                <div class="method-details">
+                                    <h4>Address</h4>
+                                    <p class="reveal">Polytechnique Sousse, Rte ceinture, entrée 4021, Sousse, Tunisia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-card reveal">
+                        <h3>Follow Us</h3>
+                        <p class="reveal">Stay connected with us on social media for travel inspiration!</p>
+                        <div class="social-links reveal">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/imen.ben.khraief/" class="social-link" aria-label="Instagram">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+
+                            <a href="https://www.instagram.com/lyne_chouchane/" class="social-link" aria-label="Instagram">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/imen.benkhraief" class="social-link" aria-label="Facebook">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+
+                            <a href="https://www.facebook.com/ly.ne.720017" class="social-link" aria-label="Facebook">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Link Section -->
+    <section class="map-link-section reveal">
+        <div class="container reveal">
+            <h2>Our Location</h2>
+            <p class="reveal">Open location in Google Maps:</p>
+            <a href="https://maps.app.goo.gl/aDzs5MPztbf2PQKv9" target="_blank" class="btn btn-primary">
+                Find Us Here!
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section reveal">
+        <div class="container reveal">
+            <h2 class="text-center reveal">Frequently Asked Questions</h2>
+
+            <div class="faq-container reveal">
+
+                <div class="faq-item reveal">
+                    <h3 class="faq-question reveal">How do you choose the destinations you write about?</h3>
+                    <div class="faq-answer reveal">
+                        <p>We write about destinations based on personal experiences, hidden gems we discover, trending spots, and suggestions from our readers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <h3 class="faq-question reveal">Can I contribute my own travel story?</h3>
+                    <div class="faq-answer reveal">
+                        <p>Yes! We welcome guest posts. Please contact us via the form or social media to submit your story.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <h3 class="faq-question reveal">Do you provide travel guides or itineraries?</h3>
+                    <div class="faq-answer reveal">
+                        <p>We provide itineraries, travel tips,budgeting or cost tips for trips, and personal experiences to inspire your adventures, but we do not book trips.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <h3 class="faq-question reveal">How often do you publish new posts?</h3>
+                    <div class="faq-answer reveal">
+                        <p>We try to post once a month, but it depends on our travels and discoveries.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <h3 class="faq-question reveal">Can I contact you for travel tips?</h3>
+                    <div class="faq-answer reveal">
+                        <p>Yes! We love helping fellow travelers. You can reach out to us through the contact form on this page, and we’ll do our best to provide helpful tips and recommendations for your next adventure.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 OffWeGo. All rights reserved. | Designed with ❤️ for adventurers</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
