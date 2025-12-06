@@ -1,90 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel Blog - Home</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelVibes - Discover the World</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="logo">TravelVibes</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+      <div class="logo">OffWeCGo</div>
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Explore the World Through Inspiring Journeys</h1>
-            <p>Your guide to the most beautiful destinations across the globe.</p>
-            <div class="hero-buttons">
-                <a href="destinations.html" class="btn primary-btn">Explore Destinations</a>
-                <a href="#themes" class="btn secondary-btn">Travel Themes</a>
-            </div>
+          <li class="dropdown">
+              <a href="destination.html">Destinations ▾</a>
+              <ul class="dropdown-menu">
+                  <li><a href="destination.html#beach">Beach</a></li>
+                  <li><a href="destination.html#mountain">Mountain & Nature</a></li>
+                  <li><a href="destination.html#urban">Urban & Cities</a></li>
+              </ul>
+          </li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero text-center d-flex flex-column justify-content-center align-items-center">
+    <h1>Travel the World, Live the Adventure!</h1>
+    <p class="lead mt-3">Take risks, have fun, and discover incredible places around the globe.</p>
+  </header>
+
+  <!-- Welcome Info -->
+  <section class="welcome py-5 text-center">
+    <div class="container">
+      <p>Traveling opens your mind, enriches your soul, and creates unforgettable memories. Whether you love sunny beaches, majestic mountains, or vibrant cities, OffWeCGo will guide you to the perfect adventures!</p>
+    </div>
+  </section>
+
+  <!-- Theme Cards -->
+  <section class="themes container py-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card theme-card" data-theme="beach">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach Theme">
+          <div class="card-body text-center">
+            <h3 class="theme-title" style="color:#3AAFA9">Beach</h3>
+            <p>Sunny sands, turquoise waters, and tropical vibes.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Welcome Section -->
-    <section class="welcome">
-        <h2>Welcome to TravelVibes</h2>
-        <p>
-            From tropical beaches to vibrant cities and breathtaking mountains,
-            discover destinations loved by travelers and filled with unforgettable
-            experiences.
-        </p>
-    </section>
-
-    <!-- Themes Section -->
-    <section id="themes" class="themes">
-        <h2>Explore by Themes</h2>
-        <div class="theme-container">
-            <!-- Beach Theme -->
-            <div class="theme-card">
-                <div class="theme-img beach-img"></div>
-                <h3>Beach Escapes</h3>
-                <p>Tropical sands, turquoise waters, and peaceful island vibes.</p>
-                <a href="destinations.html#beach" class="btn theme-btn">Explore</a>
-            </div>
-
-            <!-- Mountain Theme -->
-            <div class="theme-card">
-                <div class="theme-img mountain-img"></div>
-                <h3>Mountain & Nature</h3>
-                <p>Fresh air, green trails, and breathtaking natural views.</p>
-                <a href="destinations.html#mountain" class="btn theme-btn">Explore</a>
-            </div>
-
-            <!-- Urban Theme -->
-            <div class="theme-card">
-                <div class="theme-img urban-img"></div>
-                <h3>Urban Adventures</h3>
-                <p>Skylines, nightlife, culture, and modern city energy.</p>
-                <a href="destinations.html#urban" class="btn theme-btn">Explore</a>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card theme-card" data-theme="nature">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountain Theme">
+          <div class="card-body text-center">
+            <h3 class="theme-title" style="color:#2B7A78">Mountain & Nature</h3>
+            <p>Peaceful forests, high peaks, and breathtaking landscapes.</p>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="col-md-4">
+        <div class="card theme-card" data-theme="urban">
+          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b" alt="Urban Theme">
+          <div class="card-body text-center">
+            <h3 class="theme-title" style="color:#52796F">Cities & Urban</h3>
+            <p>Dynamic skylines, culture, and vibrant energy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <h2>Ready for your next adventure?</h2>
-        <a href="destinations.html" class="btn primary-btn">Discover All Destinations</a>
-    </section>
+  <!-- Footer -->
+  <footer class="py-4 text-center bg-light">
+    <small>© 2025 OffWeCGo — All rights reserved</small>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 TravelVibes. All Rights Reserved.</p>
-    </footer>
-    <a href="destinations.html#beach" class="btn theme-btn">Explore</a>
-    <a href="destinations.html#mountain" class="btn theme-btn">Explore</a>
-    <a href="destinations.html#urban" class="btn theme-btn">Explore</a>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
-</html
+</html>
