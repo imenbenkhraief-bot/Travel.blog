@@ -397,7 +397,7 @@ img {
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    transform 0.3s ease, box-shadow 0.3s ease; /* Specific properties only */
+    transform: 0.3s ease, box-shadow 0.3s ease; /* Specific properties only */
     cursor: pointer;
     display: flex;
     flex-direction: column;

@@ -144,3 +144,34 @@ if (logo) {
     logo.classList.remove('hover-forward');
   });
 }
+
+// function OUTSIDE of the DOMContentLoaded block
+function openPlace(destination) {
+    const pages = {
+        'bali': 'destinations/bali.html',
+        'maldives': 'destinations/maldives.html',
+        'zanzibar': 'destinations/zanzibar.html',
+        'borabora': 'destinations/borabora.html',
+        'hawaii': 'destinations/hawaii.html',
+        'dubai': 'destinations/dubai.html',
+        'seychelles': 'destinations/seychelles.html',
+        'miami': 'destinations/miami.html',
+        'swiss': 'destinations/swiss-alps.html',
+        'banff': 'destinations/banff.html',
+        'iceland': 'destinations/iceland.html',
+        'peru': 'destinations/peru.html',
+        'nepal': 'destinations/nepal.html',
+        'newzealand': 'destinations/new-zealand.html',
+        'tokyo': 'destinations/tokyo.html',
+        'newyork': 'destinations/new-york.html',
+        'london': 'destinations/london.html',
+        'paris': 'destinations/paris.html',
+        'seoul': 'destinations/seoul.html',
+        'venice': 'destinations/venice.html',
+        'barcelona': 'destinations/barcelone.html'
+    };
+    
+    if (pages[destination]) {
+        window.location.href = pages[destination];
+    }
+}

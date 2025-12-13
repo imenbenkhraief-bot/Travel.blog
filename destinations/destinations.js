@@ -268,3 +268,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+/* ===== Logo Animation (Universal) ===== */
+const logo = document.querySelector('.logo-img');
+
+if (logo) {
+  window.addEventListener('load', () => {
+    logo.classList.add('bounce-in');
+  });
+
+  logo.addEventListener('mouseenter', () => {
+    console.log('Mouse entered - adding hover-forward');
+    logo.classList.add('hover-forward');
+  });
+
+  logo.addEventListener('mouseleave', () => {
+    console.log('Mouse left - removing hover-forward');
+    logo.classList.remove('hover-forward');
+  });
+}
