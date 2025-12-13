@@ -1,0 +1,721 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body[data-theme="beach"] {
+    background: linear-gradient(-45deg, #56ab2f, #a8e063, #00b4db, #0083b0);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+body[data-theme="mountain"] {
+    background: linear-gradient(-45deg, #2c3e50, #bdc3c7, #34495e, #95a5a6);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+body[data-theme="city"] {
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+body[data-theme="beach"] .bubble {
+    position: absolute;
+    bottom: -100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.4), rgba(0,210,255,0.1));
+    border-radius: 50%;
+    animation: floatUp linear infinite;
+    opacity: 0;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh) scale(1.2);
+    }
+}
+
+body[data-theme="mountain"] .snowflake {
+    position: absolute;
+    top: -20px;
+    color: rgba(255,255,255,0.9);
+    font-size: 1.5rem;
+    opacity: 0.85;
+    animation: fall linear infinite;
+    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.85;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.2;
+    }
+}
+
+body[data-theme="city"] .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255,255,255,0.8);
+    animation: twinkleStar ease-in-out infinite;
+}
+
+@keyframes twinkleStar {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* UNIVERSAL GLASSMORPHISM NAVBAR */
+.navbar {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+body[data-theme="beach"] .navbar {
+    background: rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(86, 171, 47, 0.3);
+}
+
+body[data-theme="mountain"] .navbar {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(189, 195, 199, 0.3);
+}
+
+body[data-theme="city"] .navbar {
+    background: rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(231, 76, 60, 0.25);
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.navbar .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-links a:hover::after {
+    width: 100%;
+}
+
+body[data-theme="beach"] .navbar .nav-links a:hover::after {
+    background: #56ab2f;
+}
+
+body[data-theme="mountain"] .navbar .nav-links a:hover::after {
+    background: #bdc3c7;
+}
+
+body[data-theme="city"] .navbar .nav-links a:hover::after {
+    background: #e74c3c;
+}
+
+.navbar .nav-links a:hover {
+    color: white;
+    transform: translateY(-2px);
+    text-shadow: 0 4px 15px rgba(255,255,255,0.4);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 0.5rem 0;
+    min-width: 200px;
+    list-style: none;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+body[data-theme="beach"] .dropdown-menu {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(86, 171, 47, 0.3);
+}
+
+body[data-theme="mountain"] .dropdown-menu {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(189, 195, 199, 0.3);
+}
+
+body[data-theme="city"] .dropdown-menu {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(231, 76, 60, 0.25);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeInDown 0.3s ease;
+}
+
+.dropdown-menu a {
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.8rem 1.5rem;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    padding-left: 2rem;
+}
+
+.intro-section {
+    padding: 3rem 0 1rem;
+    animation: fadeInDown 1s;
+}
+
+.bali-accent {
+    color: #764ba2;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+body[data-theme="beach"] .bali-accent {
+    color: #56ab2f;
+}
+
+body[data-theme="mountain"] .bali-accent {
+    color: #7f8c8d;
+}
+
+body[data-theme="city"] .bali-accent {
+    color: #e74c3c;
+}
+
+.hero-section {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    margin: 2rem 0;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.hero-slider {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+    padding: 3rem;
+    z-index: 2;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    animation: fadeInUp 1s;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    animation: fadeInUp 1.2s;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.dot:hover {
+    background: rgba(255,255,255,0.8);
+}
+
+.dot.active {
+    background: white;
+    width: 30px;
+    border-radius: 6px;
+}
+
+.info-section {
+    padding: 3rem 0;
+}
+
+.row.g-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    margin-bottom: 0;
+    animation: fadeInUp 1s;
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.col-md-6, .col-lg-3, .col-md-12, .col-lg-6 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+
+.card-header {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+}
+
+body[data-theme="beach"] .card-bali-1 .card-header {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+body[data-theme="beach"] .card-bali-2 .card-header {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+body[data-theme="beach"] .card-bali-3 .card-header {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+}
+
+body[data-theme="beach"] .card-bali-4 .card-header {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+
+body[data-theme="mountain"] .card-bali-1 .card-header {
+    background: linear-gradient(135deg, #2c3e50, #bdc3c7);
+}
+
+body[data-theme="mountain"] .card-bali-2 .card-header {
+    background: linear-gradient(135deg, #34495e, #95a5a6);
+}
+
+body[data-theme="mountain"] .card-bali-3 .card-header {
+    background: linear-gradient(135deg, #4a69bd, #6a89cc);
+}
+
+body[data-theme="mountain"] .card-bali-4 .card-header {
+    background: linear-gradient(135deg, #596275, #7f8c8d);
+}
+
+body[data-theme="city"] .card-bali-1 .card-header {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+body[data-theme="city"] .card-bali-2 .card-header {
+    background: linear-gradient(135deg, #f39c12, #f1c40f);
+}
+
+body[data-theme="city"] .card-bali-3 .card-header {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+body[data-theme="city"] .card-bali-4 .card-header {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.info-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+body[data-theme="beach"] .info-item:hover {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(86,171,47,0.2);
+    border-left-color: #56ab2f;
+}
+
+body[data-theme="mountain"] .info-item:hover {
+    background: linear-gradient(135deg, #ecf0f1, #d5dbdb);
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(52,73,94,0.2);
+    border-left-color: #7f8c8d;
+}
+
+body[data-theme="city"] .info-item:hover {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(231,76,60,0.2);
+    border-left-color: #e74c3c;
+}
+
+.info-item-title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.info-item-details {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-item-price {
+    color: #764ba2;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+body[data-theme="beach"] .info-item-price {
+    color: #56ab2f;
+}
+
+body[data-theme="mountain"] .info-item-price {
+    color: #7f8c8d;
+}
+
+body[data-theme="city"] .info-item-price {
+    color: #e74c3c;
+}
+
+.recommendation {
+    display: block;
+    margin-top: 1rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.activity-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+}
+.activity-photo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.activity-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 1rem;
+    color: white;
+}
+
+.activity-name {
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.activity-price {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+body[data-theme="beach"] .activity-price {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+body[data-theme="mountain"] .activity-price {
+    background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+}
+
+body[data-theme="city"] .activity-price {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.advice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.advice-list li {
+    padding: 0.8rem;
+    margin-bottom: 0.7rem;
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    border-left: 4px solid #f39c12;
+    border-radius: 8px;
+    display: flex;
+    align-items: start;
+    gap: 0.8rem;
+    transition: all 0.3s;
+}
+
+body[data-theme="beach"] .advice-list li {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    border-left-color: #56ab2f;
+}
+
+body[data-theme="mountain"] .advice-list li {
+    background: linear-gradient(135deg, #ecf0f1, #d5dbdb);
+    border-left-color: #7f8c8d;
+}
+
+body[data-theme="city"] .advice-list li {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    border-left-color: #e74c3c;
+}
+
+.advice-list li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+body[data-theme="beach"] .advice-list li:hover {
+    background: linear-gradient(135deg, #c3e6cb, #a8e063);
+}
+
+body[data-theme="mountain"] .advice-list li:hover {
+    background: linear-gradient(135deg, #d5dbdb, #bdc3c7);
+}
+
+body[data-theme="city"] .advice-list li:hover {
+    background: linear-gradient(135deg, #f5c6cb, #e74c3c);
+}
+
+.advice-list li i {
+    color: #f39c12;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+body[data-theme="beach"] .advice-list li i {
+    color: #56ab2f;
+}
+
+body[data-theme="mountain"] .advice-list li i {
+    color: #7f8c8d;
+}
+
+body[data-theme="city"] .advice-list li i {
+    color: #e74c3c;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .navbar .nav-links {
+        gap: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section {
+        height: 400px;
+    }
+}

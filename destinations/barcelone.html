@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title - IMPORTANT: "Barcelona" in title triggers city theme automatically -->
+    <title>Barcelona - Gaudí's Masterpiece | OffWeGo</title>
+    
+    <!-- External CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap for grid system -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="destinations.css"> <!-- Your custom CSS with universal theme styles -->
+
+</head>
+<body>
+    <!-- NAVIGATION BAR - Sticky at top -->
+    <nav class="navbar">
+      <!-- Logo/Brand name -->
+      <div class="logo">OffWeGo</div>
+      
+      <!-- Navigation links -->
+      <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          
+          <!-- Dropdown menu for destinations -->
+          <li class="dropdown">
+              <a href="destination.html">Destinations</a>
+              <ul class="dropdown-menu">
+                  <li><a href="destination.html#beach">Beach</a></li>
+                  <li><a href="destination.html#mountain">Mountain & Nature</a></li>
+                  <li><a href="destination.html#urban">Urban & Cities</a></li>
+              </ul>
+          </li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+
+
+    <!-- INTRO SECTION - Main heading and description -->
+    <section class="container mb-4 text-center intro-section">
+        <!-- Main title with accent class that changes color based on theme -->
+        <h1 class="display-4 bali-accent">Barcelona — City of Art & Architecture</h1>
+        <!-- Subtitle/description -->
+        <p class="lead">From Gaudí's masterpieces to Mediterranean beaches and vibrant culture — Barcelona offers history, modernism, and unforgettable experiences.</p>
+    </section>
+
+    <!-- HERO SECTION - Image slider with 4 images -->
+    <div class="container">
+        <div class="hero-section">
+            <!-- Slider container -->
+            <div class="hero-slider">
+                <!-- Slide 1 - Active by default -->
+                <div class="hero-slide active">
+                    <img src="https://www.connaissancedesarts.com/wp-content/thumbnails/uploads/2025/09/cda25_sagrada_familia_barcelone_100_ans-tt-width-335-height-188-fill-1-crop-0-bgcolor-ffffff.jpg" alt="Sagrada Familia Barcelona">
+                </div>
+                <!-- Slide 2 -->
+                <div class="hero-slide">
+                    <img src="https://images.unsplash.com/photo-1562883676-8c7feb83f09b?w=1200&h=600&fit=crop" alt="Park Güell Barcelona">
+                </div>
+                <!-- Slide 3 -->
+                <div class="hero-slide">
+                    <img src="https://thumbs.dreamstime.com/b/praia-de-barceloneta-em-barcelona-no-por-do-sol-espanha-98330519.jpg" alt="Barceloneta Beach">
+                </div>
+                <!-- Slide 4 -->
+                <div class="hero-slide">
+                    <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&h=600&fit=crop" alt="Gothic Quarter Barcelona">
+                </div>
+            </div>
+            
+            <!-- Text overlay on hero images -->
+            <div class="hero-overlay">
+                <h2 class="hero-title">🏛️ Discover the Magic of Barcelona</h2>
+                <p class="hero-subtitle">Where modernism meets Mediterranean charm</p>
+            </div>
+            
+            <!-- Slider navigation dots -->
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span> <!-- Dot 1 - Active -->
+                <span class="dot" data-slide="1"></span> <!-- Dot 2 -->
+                <span class="dot" data-slide="2"></span> <!-- Dot 3 -->
+                <span class="dot" data-slide="3"></span> <!-- Dot 4 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT SECTION - 4 Information Cards -->
+    <section class="container mb-5 info-section">
+        <div class="row g-4"> <!-- Bootstrap grid with gap -->
+            
+            <!-- CARD 1: WHERE TO SLEEP - Accommodations -->
+            <div class="col-md-6 col-lg-3"> <!-- Responsive column: 50% on medium, 25% on large screens -->
+                <div class="card info-card card-bali-1 shadow-sm"> <!-- card-bali-1 triggers specific gradient colors -->
+                    <!-- Card header with icon and title -->
+                    <div class="card-header">
+                        <i class="fas fa-bed"></i> <!-- Bed icon -->
+                        <span>Where to Sleep?</span>
+                    </div>
+                    <!-- Card body with accommodation options -->
+                    <div class="card-body">
+                        <!-- Each info-item is one accommodation option -->
+                        <div class="info-item">
+                            <div class="info-item-title">Sant Jordi Hostels</div>
+                            <div class="info-item-details">Hostel - Gothic Quarter</div>
+                            <div class="info-item-price">€20–€35 / night</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-title">Hotel Continental Barcelona</div>
+                            <div class="info-item-details">Budget Friendly - Las Ramblas</div>
+                            <div class="info-item-price">€80–€120 / night</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-title">Mercer Hotel Barcelona</div>
+                            <div class="info-item-details">Boutique Hotel - Gothic Quarter</div>
+                            <div class="info-item-price">€200–€350 / night</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-title">W Barcelona</div>
+                            <div class="info-item-details">Luxury Beachfront - Barceloneta</div>
+                            <div class="info-item-price">€250–€500 / night</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-title">Hotel Arts Barcelona</div>
+                            <div class="info-item-details">Ultra Luxury Resort - Port Olímpic</div>
+                            <div class="info-item-price">€400–€800+ / night</div>
+                        </div>
+                        <!-- Recommendation text at bottom of card -->
+                        <small class="recommendation">📍 Gothic Quarter for history & culture, Eixample for Gaudí sites, Barceloneta for beaches, Gracia for local vibe</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2: WHERE TO EAT - Restaurants -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card info-card card-bali-2 shadow-sm"> <!-- card-bali-2 triggers different gradient -->
+                    <div class="card-header">
+                        <i class="fas fa-utensils"></i> <!-- Utensils icon -->
+                        <span>Where to Eat?</span>
+                    </div>
+                    <div class="card-body">
+                        <!-- Each info-item is one restaurant -->
+                        <div class="info-item">
+                            <div class="info-item-title">Bar Celta Pulpería</div>
+                            <div class="info-item-details">Local Tapas Bar - Octopus & Pulpo</div>
+                            <div class="info-item-price">€8–€15</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-title">Cal Pep</div>
+                            <div class="info-item-details">Traditional Seafood - Born District</div>
+                            <div class="info-item-price">€25–€40</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-title">Flax & Kale</div>
+                            <div class="info-item-details">Healthy Café - Eixample (Bowls & Smoothies)</div>
+                            <div class="info-item-price">€12–€18</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-title">Cervecería Catalana</div>
+                            <div class="info-item-details">Popular Tapas - Eixample</div>
+                            <div class="info-item-price">€15–€30</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-title">Tickets Bar</div>
+                            <div class="info-item-details">Fine Dining Tapas - Poble Sec (by Adrià brothers)</div>
+                            <div class="info-item-price">€60–€100</div>
+                        </div>
+                        <small class="recommendation">💡 Try tapas bars for lunch, beachfront chiringuitos for sunset, reservations essential for popular spots</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3: ACTIVITIES - Takes up more space (50% width) -->
+            <div class="col-md-12 col-lg-6">
+                <div class="card info-card card-bali-3 shadow-sm"> <!-- card-bali-3 triggers third gradient -->
+                    <div class="card-header">
+                        <i class="fas fa-hiking"></i> <!-- Hiking icon -->
+                        <span>Activities & Adventures</span>
+                    </div>
+                    <div class="card-body">
+                        <!-- Activities displayed in a 2x2 grid -->
+                        <div class="activities-grid">
+                            <!-- Activity 1 -->
+                            <div class="activity-item">
+                                <img src="https://e3.365dm.com/24/02/1600x900/skynews-la-sagrada-familia_6441536.jpg?20240325112053" class="activity-photo" alt="Sagrada Familia">
+                                <div class="activity-overlay"> <!-- Overlay with text appears on hover -->
+                                    <div class="activity-name">Sagrada Familia Tour</div>
+                                    <div class="activity-price">€26–€40</div>
+                                </div>
+                            </div>
+                            <!-- Activity 2 -->
+                            <div class="activity-item">
+                                <img src="https://i.pinimg.com/originals/cf/fb/c4/cffbc4061b1838014e5be0f2f5428193.jpg" class="activity-photo" alt="Park Güell">
+                                <div class="activity-overlay">
+                                    <div class="activity-name">Park Güell & Gaudí Sites</div>
+                                    <div class="activity-price">€10–€35</div>
+                                </div>
+                            </div>
+                            <!-- Activity 3 -->
+                            <div class="activity-item">
+                                <img src="https://followsoots.com/wp-content/uploads/2023/01/W-at-the-Beach-800x618.jpg" class="activity-photo" alt="Barcelona beaches">
+                                <div class="activity-overlay">
+                                    <div class="activity-name">Beach Day at Barceloneta</div>
+                                    <div class="activity-price">Free</div>
+                                </div>
+                            </div>
+                            <!-- Activity 4 -->
+                            <div class="activity-item">
+                                <img src="https://www.pragueticketoffice.com/Repository/catalog/titles/1113150_gal_Prague%20Old%20Town%20quare.jpg" class="activity-photo" alt="Gothic Quarter">
+                                <div class="activity-overlay">
+                                    <div class="activity-name">Gothic Quarter Walking Tour</div>
+                                    <div class="activity-price">Free–€15</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4: TRAVEL TIPS & ADVICE -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card info-card card-bali-4 shadow-sm"> <!-- card-bali-4 triggers fourth gradient -->
+                    <div class="card-header">
+                        <i class="fas fa-lightbulb"></i> <!-- Lightbulb icon -->
+                        <span>Advice & Useful Info</span>
+                    </div>
+                    <div class="card-body">
+                        <!-- List of travel tips -->
+                        <ul class="advice-list">
+                            <!-- Each li is one tip with icon and text -->
+                            <li>
+                                <i class="fas fa-calendar-alt"></i> <!-- Calendar icon -->
+                                <span>Best travel period: April – June & September – October (pleasant weather)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-subway"></i> <!-- Subway icon -->
+                                <span>Metro T-10 card: €11.35 for 10 trips — best value for transport</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-ticket-alt"></i> <!-- Ticket icon -->
+                                <span>Book Sagrada Familia & Park Güell tickets weeks in advance online</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-exclamation-triangle"></i> <!-- Warning icon -->
+                                <span>Watch for pickpockets in Las Ramblas, metro, and crowded tourist areas</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i> <!-- Clock icon -->
+                                <span>Dining times: Lunch 2-4 PM, dinner starts at 9 PM — plan accordingly</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-4 bg-light">
+        <p>© 2025 OffWeGo — Explore Your World</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS for interactive components -->
+    <script src="destinations.js"></script> <!-- Your custom JS for slider, animations, and theme detection -->
+
+</body>
+</html>
