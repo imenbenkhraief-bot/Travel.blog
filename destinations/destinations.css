@@ -820,3 +820,18 @@ body[data-theme="city"] .advice-list li i {
         height: 400px;
     }
 }
+/* ===== FOOTER ===== */
+footer {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+    padding: 3rem 0;
+    text-align: center;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+}
+
+footer p {
+    color: rgba(255,255,255,0.9) !important;
+}
