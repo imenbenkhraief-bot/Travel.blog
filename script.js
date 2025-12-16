@@ -12,6 +12,7 @@ function revealOnScroll() {
       el.classList.add('show');
     }
   });
+
   
   ticking = false;
 }
@@ -22,12 +23,20 @@ function requestTick() {
     ticking = true;
   }
 }
-
 if (revealElements.length > 0) {
-  window.addEventListener('scroll', requestTick);
-  revealOnScroll();
-}
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
 
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+}
 /* ===== Lightbox for Gallery Images ===== */
 const images = document.querySelectorAll('.lightbox-trigger');
 const lightbox = document.getElementById('lightbox');

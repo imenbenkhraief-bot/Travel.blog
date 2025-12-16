@@ -116,19 +116,19 @@ body {
 }
 
 body[data-theme="beach"] {
-    background: linear-gradient(-45deg, #56ab2f, #a8e063, #00b4db, #0083b0);
+    background: linear-gradient(-45deg, #03889fba, #26d8c7, #0b878e, #0ac5cf);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
 }
 
 body[data-theme="mountain"] {
-    background: linear-gradient(-45deg, #2c3e50, #bdc3c7, #34495e, #95a5a6);
+    background: linear-gradient(-45deg, #456584, #c3dcec, #4b7094, #64888a);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
 }
 
 body[data-theme="city"] {
-    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+    background: linear-gradient(-45deg, #4a4ac4, #7395f1, #672fe9, #9151e6);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
 }

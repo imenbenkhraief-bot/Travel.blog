@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
@@ -18,14 +17,19 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="destination.html" class="nav-link active">Destinations</a></li>
+                    <ul class="dropdown-menu">
+                        <li><a href="#beach">Beach</a></li>
+                        <li><a href="#mountain">Mountain & Nature</a></li>
+                        <li><a href="#urban">Urban & Cities</a></li>
+                    </ul>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </ul>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
@@ -37,137 +41,111 @@
         </div>
     </header>
 
-    <!-- Destination Content -->
-    <div class="destination-page">
-        <div class="container">
+  <!-- Destination Content -->
+<div class="destination-page">
+    <div class="container">
 
-            <!-- BEACH SECTION -->
-            <h2 id="beach" class="theme-header beach-header reveal">🏖 Beach Destinations</h2>
-            <div class="destination-grid">
+        <!-- BEACH SECTION -->
+        <h2 id="beach" class="theme-header beach-header reveal">🏖 Beach Destinations</h2>
+        <div class="destination-grid">
 
-                <div class="destination-card" onclick="openPlace('bali')">
-                    <img src="https://th.bing.com/th/id/R.a652456d495886c749307c28cbe6758d?rik=uCgdloWfMfHypQ&pid=ImgRaw&r=0" alt="Bali">
-                    <h3>Bali</h3>
-                </div>
+            <a href="bali.html" class="destination-card">
+                <img src="https://th.bing.com/th/id/R.a652456d495886c749307c28cbe6758d?rik=uCgdloWfMfHypQ&pid=ImgRaw&r=0" alt="Bali">
+                <h3>Bali</h3>
+            </a>
 
-                <div class="destination-card" onclick="openPlace('maldives')">
-                    <img src="https://tse1.mm.bing.net/th/id/OIP.iLunKdrM40C9OUnR32FuSwHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Maldives">
-                    <h3>Maldives</h3>
-                </div>
+            <a href="maldives.html" class="destination-card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.iLunKdrM40C9OUnR32FuSwHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Maldives">
+                <h3>Maldives</h3>
+            </a>
 
-                <div class="destination-card" onclick="openPlace('zanzibar')">
-                    <img src="https://th.bing.com/th/id/R.d210d61434803261cfeb2e9d75c31548?rik=d61WbF0I20wj6g&pid=ImgRaw&r=0" alt="Zanzibar">
-                    <h3>Zanzibar</h3>
-                </div>
+            <a href="borabora.html" class="destination-card">
+                <img src="https://th.bing.com/th/id/R.2bd6f8ca2a79b6c0ee1129bc0b687f0e?rik=t7APqUfwqVZVlA&pid=ImgRaw&r=0" alt="Bora Bora">
+                <h3>Bora Bora</h3>
+            </a>
 
-                <div class="destination-card" onclick="openPlace('borabora')">
-                    <img src="https://th.bing.com/th/id/R.2bd6f8ca2a79b6c0ee1129bc0b687f0e?rik=t7APqUfwqVZVlA&pid=ImgRaw&r=0" alt="Bora Bora">
-                    <h3>Bora Bora</h3>
-                </div>
+            <a href="hawaii.html" class="destination-card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.KOgHEhZ7vegKPAuPdPCV9AHaE7?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hawaii">
+                <h3>Hawaii</h3>
+            </a>
 
-                <div class="destination-card" onclick="openPlace('hawaii')">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.KOgHEhZ7vegKPAuPdPCV9AHaE7?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hawaii">
-                    <h3>Hawaii</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('dubai')">
-                    <img src="https://tse1.mm.bing.net/th/id/OIP.a5p5gDkMoE9gredPpb2gmgHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Dubai">
-                    <h3>Dubai</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('seychelles')">
-                    <img src="https://tse2.mm.bing.net/th/id/OIP.aEV3M5Q-HRumD-jTIWQPsgHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Seychelles">
-                    <h3>Seychelles</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('miami')">
-                    <img src="https://tse4.mm.bing.net/th/id/OIP.4dwV06FZpa-THy1otaXiXQHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Miami">
-                    <h3>Miami</h3>
-                </div>
-
-            </div>
-
-
-            <!-- MOUNTAIN SECTION -->
-            <h2 id="mountain" class="theme-header mountain-header reveal">⛰ Mountain & Nature</h2>
-            <div class="destination-grid">
-
-                <div class="destination-card" onclick="openPlace('swiss')">
-                    <img src="https://tse1.mm.bing.net/th/id/OIP.tDcfXUT4anjc1D1c_KTcjwHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Swiss Alps">
-                    <h3>Swiss Alps</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('banff')">
-                    <img src="https://wallpaperaccess.com/full/3084028.jpg" alt="Banff">
-                    <h3>Banff</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('iceland')">
-                    <img src="https://tse1.mm.bing.net/th/id/OIP.GuqNpjyCj2BjDSAgyAg0swHaE7?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Iceland">
-                    <h3>Iceland</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('peru')">
-                    <img src="https://tse2.mm.bing.net/th/id/OIP.rSGJGR4Nr8L7s5D-gnJ1SwHaDq?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Peru">
-                    <h3>Peru</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('nepal')">
-                    <img src="https://wallpaperaccess.com/full/166015.jpg" alt="Nepal">
-                    <h3>Nepal</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('newzealand')">
-                    <img src="https://th.bing.com/th/id/OIP.k1OCjLfSc0vJnN47oy29ewHaE7?w=243&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="New Zealand">
-                    <h3>New Zealand</h3>
-                </div>
-
-            </div>
-
-
-            <!-- URBAN SECTION -->
-            <h2 id="urban" class="theme-header urban-header reveal">🌆 Urban & Cities</h2>
-            <div class="destination-grid">
-
-                <div class="destination-card" onclick="openPlace('tokyo')">
-                    <img src="https://www.grazia.fr/wp-content/uploads/grazia/2009/11/Tokyo-ville-la-plus-etoilee-au-Michelin-750x410.jpe" alt="Tokyo">
-                    <h3>Tokyo</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('newyork')">
-                    <img src="https://tse2.mm.bing.net/th/id/OIP.WThxM6RpuXjGekv8A8HAdQHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="New York">
-                    <h3>New York</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('london')">
-                    <img src="https://tse2.mm.bing.net/th/id/OIP.6Fnha_rDmM-EpTNJqpudRQHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="London">
-                    <h3>London</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('paris')">
-                    <img src="https://tse1.mm.bing.net/th/id/OIP.QcAbCFop7af-3D7CrVActAHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Paris">
-                    <h3>Paris</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('seoul')">
-                    <img src="https://th.bing.com/th/id/OIP.hYN4yeW_V0VMysp_jINbVAHaEK?w=301&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Seoul">
-                    <h3>Seoul</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('venice')">
-                    <img src="https://i1.wp.com/julychoo.com/wp-content/uploads/2020/01/IMG_3907-1024x768.jpg" alt="Venice">
-                    <h3>Venice</h3>
-                </div>
-
-                <div class="destination-card" onclick="openPlace('barcelona')">
-                    <img src="https://wallpapercave.com/wp/wp1825728.jpg" alt="Barcelona">
-                    <h3>Barcelona</h3>
-                </div>
-
-            </div>
+            <a href="miami.html" class="destination-card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.4dwV06FZpa-THy1otaXiXQHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Miami">
+                <h3>Miami</h3>
+            </a>
 
         </div>
+
+
+        <!-- MOUNTAIN SECTION -->
+        <h2 id="mountain" class="theme-header mountain-header reveal">⛰ Mountain & Nature</h2>
+        <div class="destination-grid">
+
+            <a href="swiss-alps.html" class="destination-card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.tDcfXUT4anjc1D1c_KTcjwHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Swiss Alps">
+                <h3>Swiss Alps</h3>
+            </a>
+
+            <a href="banff.html" class="destination-card">
+                <img src="https://wallpaperaccess.com/full/3084028.jpg" alt="Banff">
+                <h3>Banff</h3>
+            </a>
+
+            <a href="iceland.html" class="destination-card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.GuqNpjyCj2BjDSAgyAg0swHaE7?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Iceland">
+                <h3>Iceland</h3>
+            </a>
+
+            <a href="nepal.html" class="destination-card">
+                <img src="https://wallpaperaccess.com/full/166015.jpg" alt="Nepal">
+                <h3>Nepal</h3>
+            </a>
+
+            <a href="newzealand.html" class="destination-card">
+                <img src="https://th.bing.com/th/id/OIP.k1OCjLfSc0vJnN47oy29ewHaE7?w=243&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="New Zealand">
+                <h3>New Zealand</h3>
+            </a>
+
+        </div>
+
+
+        <!-- URBAN SECTION -->
+        <h2 id="urban" class="theme-header urban-header reveal">🌆 Urban & Cities</h2>
+        <div class="destination-grid">
+
+            <a href="tokyo.html" class="destination-card">
+                <img src="https://www.grazia.fr/wp-content/uploads/grazia/2009/11/Tokyo-ville-la-plus-etoilee-au-Michelin-750x410.jpe" alt="Tokyo">
+                <h3>Tokyo</h3>
+            </a>
+
+            <a href="newyork.html" class="destination-card">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.WThxM6RpuXjGekv8A8HAdQHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="New York">
+                <h3>New York</h3>
+            </a>
+            <a href="dubai.html" class="destination-card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.a5p5gDkMoE9gredPpb2gmgHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Dubai">
+                <h3>Dubai</h3>
+            </a>
+
+            <a href="london.html" class="destination-card">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.6Fnha_rDmM-EpTNJqpudRQHaE8?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="London">
+                <h3>London</h3>
+            </a>
+            
+            <a href="seoul.html" class="destination-card">
+                <img src="https://th.bing.com/th/id/OIP.hYN4yeW_V0VMysp_jINbVAHaEK?w=301&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Seoul">
+                <h3>Seoul</h3>
+            </a>
+
+            <a href="barcelone.html" class="destination-card">
+                <img src="https://wallpapercave.com/wp/wp1825728.jpg" alt="Barcelona">
+                <h3>Barcelona</h3>
+            </a>
+
+        </div>
+
     </div>
+</div>
     
     <!-- Footer -->
     <footer>

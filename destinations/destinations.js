@@ -286,4 +286,4 @@ if (logo) {
     console.log('Mouse left - removing hover-forward');
     logo.classList.remove('hover-forward');
   });
-}
+}  
