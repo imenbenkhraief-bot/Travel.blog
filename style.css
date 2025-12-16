@@ -797,22 +797,6 @@ footer p {
     opacity: 1;
     transform: translateY(0);
 }
-.dropdown-menu li {
-    padding: 0;
-}
-
-.dropdown-menu a {
-    color: #1e293b;
-    padding: 0.85rem 1.5rem;
-    border-radius: 0;
-    font-size: 0.95rem;
-}
-
-.dropdown-menu a:hover {
-    background: linear-gradient(90deg, #e0f2fe, #ddd6fe);
-    color: #1e293b;
-    transform: translateX(5px);
-}
 
 /* === GLOBAL FOOTER === */
 footer {
