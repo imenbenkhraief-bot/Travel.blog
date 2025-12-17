@@ -312,27 +312,6 @@ body[data-theme="city"] .navbar .nav-links a:hover::after {
     text-shadow: 0 4px 15px rgba(255,255,255,0.4);
 }
 
-.dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    padding: 0.5rem 0;
-    min-width: 200px;
-    list-style: none;
-    margin-top: 0.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
 body[data-theme="beach"] .dropdown-menu {
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(86, 171, 47, 0.3);
@@ -348,22 +327,6 @@ body[data-theme="city"] .dropdown-menu {
     border: 1px solid rgba(231, 76, 60, 0.25);
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-    animation: fadeInDown 0.3s ease;
-}
-
-.dropdown-menu a {
-    color: rgba(255, 255, 255, 0.9);
-    padding: 0.8rem 1.5rem;
-    display: block;
-    transition: all 0.3s ease;
-}
-
-.dropdown-menu a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    padding-left: 2rem;
-}
 
 .intro-section {
     padding: 3rem 0 1rem;

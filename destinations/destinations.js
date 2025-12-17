@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const pageContent = pageTitle + ' ' + pageURL;
 
         // Beach destinations
-        const beachDestinations = ['bali', 'bora bora', 'zanzibar', 'maldives', 'miami', 'hawaii'];
+        const beachDestinations = ['bali', 'bora bora', 'maldives', 'miami', 'hawaii'];
         
         // City/Urban destinations
-        const cityDestinations = ['paris', 'new york', 'london', 'tokyo', 'dubai', 'barcelona', 'venice', 'seoul'];
+        const cityDestinations = ['new york', 'london', 'tokyo', 'dubai', 'barcelona', 'venice', 'seoul'];
         
         // Mountain/Nature destinations
-        const mountainDestinations = ['swiss alps', 'iceland', 'banff', 'new zealand', 'peru'];
+        const mountainDestinations = ['swiss alps', 'iceland', 'banff', 'new zealand'];
 
         // Check which theme matches
         for (let destination of beachDestinations) {

@@ -1,4 +1,3 @@
-
 const revealElements = document.querySelectorAll('.reveal');
 
 let ticking = false;
@@ -27,7 +26,8 @@ if (revealElements.length > 0) {
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active');
+                // add the 'show' class (matches CSS) so elements become visible
+                entry.target.classList.add('show');
                 revealObserver.unobserve(entry.target);
             }
         });
@@ -36,6 +36,13 @@ if (revealElements.length > 0) {
     revealElements.forEach(element => {
         revealObserver.observe(element);
     });
+
+    // also trigger reveal on scroll and resize for older browsers or when IntersectionObserver doesn't fire
+    window.addEventListener('scroll', requestTick);
+    window.addEventListener('resize', requestTick);
+    window.addEventListener('load', revealOnScroll);
+    // run once on load
+    revealOnScroll();
 }
 /* ===== Lightbox for Gallery Images ===== */
 const images = document.querySelectorAll('.lightbox-trigger');
@@ -159,22 +166,18 @@ function openPlace(destination) {
     const pages = {
         'bali': 'destinations/bali.html',
         'maldives': 'destinations/maldives.html',
-        'zanzibar': 'destinations/zanzibar.html',
         'borabora': 'destinations/borabora.html',
         'hawaii': 'destinations/hawaii.html',
         'dubai': 'destinations/dubai.html',
-        'seychelles': 'destinations/seychelles.html',
         'miami': 'destinations/miami.html',
-        'swiss': 'destinations/swiss-alps.html',
+        'swiss': 'destinations/swiss-alp.html',
         'banff': 'destinations/banff.html',
         'iceland': 'destinations/iceland.html',
-        'peru': 'destinations/peru.html',
         'nepal': 'destinations/nepal.html',
-        'newzealand': 'destinations/new-zealand.html',
+        'newzealand': 'destinations/newzealand.html',
         'tokyo': 'destinations/tokyo.html',
-        'newyork': 'destinations/new-york.html',
+        'newyork': 'destinations/newyork.html',
         'london': 'destinations/london.html',
-        'paris': 'destinations/paris.html',
         'seoul': 'destinations/seoul.html',
         'venice': 'destinations/venice.html',
         'barcelona': 'destinations/barcelone.html'
